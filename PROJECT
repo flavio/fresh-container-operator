@@ -1,0 +1,3 @@
+domain: stale-container-operator.suse.com
+repo: github.com/flavio/stale-container-operator
+version: "2"
