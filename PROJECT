@@ -1,3 +1,7 @@
 domain: stale-container-operator.suse.com
 repo: github.com/flavio/stale-container-operator
+resources:
+- group: infrastructure
+  kind: StaleContainerMonitor
+  version: v1alpha1
 version: "2"
