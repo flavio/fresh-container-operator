@@ -1,7 +1,7 @@
-domain: stale-container-operator.suse.com
-repo: github.com/flavio/stale-container-operator
+domain: fresh-container-operator.suse.com
+repo: github.com/flavio/fresh-container-operator
 resources:
 - group: infrastructure
-  kind: StaleContainerMonitor
+  kind: FreshContainerMonitor
   version: v1alpha1
 version: "2"

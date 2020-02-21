@@ -1,0 +1,8 @@
+apiVersion: infrastructure.fresh-container-operator.suse.com/v1alpha1
+kind: FreshContainerMonitor
+metadata:
+  name: fresh-container-monitor
+spec:
+  # Add fields here
+  fresh_container_server_url: http://fresh-container.default.svc.cluster.local
+  check_interval_minutes: 60

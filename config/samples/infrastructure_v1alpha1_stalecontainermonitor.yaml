@@ -1,7 +1,0 @@
-apiVersion: infrastructure.stale-container-operator.suse.com/v1alpha1
-kind: StaleContainerMonitor
-metadata:
-  name: stalecontainermonitor-sample
-spec:
-  # Add fields here
-  foo: bar

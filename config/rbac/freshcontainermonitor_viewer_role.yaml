@@ -1,0 +1,20 @@
+# permissions to do viewer freshcontainermonitors.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: freshcontainermonitor-viewer-role
+rules:
+- apiGroups:
+  - infrastructure.fresh-container-operator.suse.com
+  resources:
+  - freshcontainermonitors
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - infrastructure.fresh-container-operator.suse.com
+  resources:
+  - freshcontainermonitors/status
+  verbs:
+  - get

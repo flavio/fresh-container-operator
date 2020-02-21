@@ -20,8 +20,8 @@ import (
 	"flag"
 	"os"
 
-	infrastructurev1alpha1 "github.com/flavio/stale-container-operator/api/v1alpha1"
-	"github.com/flavio/stale-container-operator/controllers"
+	infrastructurev1alpha1 "github.com/flavio/fresh-container-operator/api/v1alpha1"
+	"github.com/flavio/fresh-container-operator/controllers"
 	"k8s.io/apimachinery/pkg/runtime"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
@@ -65,12 +65,12 @@ func main() {
 		os.Exit(1)
 	}
 
-	if err = (&controllers.StaleContainerMonitorReconciler{
+	if err = (&controllers.FreshContainerMonitorReconciler{
 		Client: mgr.GetClient(),
-		Log:    ctrl.Log.WithName("controllers").WithName("StaleContainerMonitor"),
+		Log:    ctrl.Log.WithName("controllers").WithName("FreshContainerMonitor"),
 		Scheme: mgr.GetScheme(),
 	}).SetupWithManager(mgr); err != nil {
-		setupLog.Error(err, "unable to create controller", "controller", "StaleContainerMonitor")
+		setupLog.Error(err, "unable to create controller", "controller", "FreshContainerMonitor")
 		os.Exit(1)
 	}
 	// +kubebuilder:scaffold:builder
